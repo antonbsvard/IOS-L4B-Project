@@ -33,12 +33,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hwk-z7-yxF">
+                                <rect key="frame" x="48" y="92" width="318" height="318"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hwk-z7-yxF" secondAttribute="height" multiplier="1:1" id="s1E-NF-RMT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.58721264588001176" blue="0.84194334016208816" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Hwk-z7-yxF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="81u-aV-ITN"/>
                             <constraint firstItem="5sa-XD-jEX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gvo-52-srA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XgZ-De-Vct" secondAttribute="bottom" constant="122" id="R9h-Ue-mxO"/>
+                            <constraint firstItem="Hwk-z7-yxF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="YeD-qs-HW8"/>
                             <constraint firstItem="5sa-XD-jEX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eKH-8j-ZjF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hwk-z7-yxF" secondAttribute="trailing" constant="48" id="elF-GT-qiH"/>
                             <constraint firstItem="XgZ-De-Vct" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="ihk-to-8Wb"/>
                             <constraint firstItem="XgZ-De-Vct" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qvr-XL-xzn"/>
                         </constraints>
@@ -46,11 +55,12 @@
                     </view>
                     <connections>
                         <outlet property="startQuizBtn" destination="XgZ-De-Vct" id="yex-aI-gtp"/>
+                        <outlet property="startpageImage" destination="Hwk-z7-yxF" id="Ady-D3-lOT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
         </scene>
     </scenes>
 </document>
