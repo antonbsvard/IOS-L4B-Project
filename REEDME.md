@@ -1,6 +1,6 @@
-IOS-PROJECT GROUP L4B
-Appname: KAHOO
+# IOS-PROJECT GROUP L4B
+# Appname: KAHOO
 
-LINKS:
+# LINKS:
 Open Trivia DB:
 https://opentdb.com/
