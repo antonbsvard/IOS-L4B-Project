@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var startQuizBtn: UIButton!
@@ -41,7 +42,17 @@ class ViewController: UIViewController {
             }
             do {
             guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String : Any] else {fatalError("OPPS")}
-            print(json["results"])
+                
+//                print(json["results"]!)
+                let results = json["results"]
+                for object in (results as! NSArray) {
+                    for item in object as! NSDictionary{
+                        print("Key: " + (item.key as! String))
+                        print("Value: " + (item.value as! String))
+                        break
+                    }
+                    break
+                }
             } catch{
                 print("Inte BRa!")
             }
