@@ -1,5 +1,5 @@
 # IOS-PROJECT GROUP L4B
-# Appname: KAHOO
+# Appname: TAHOO
 
 # LINKS:
 Open Trivia DB:
