@@ -39,8 +39,15 @@ class ViewController: UIViewController {
                 return
                 
             }
-            let dataAsString = String(data: data, encoding: .utf8)
-            print(dataAsString)
+            do {
+            guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String : Any] else {fatalError("OPPS")}
+            print(json["results"])
+            } catch{
+                print("Inte BRa!")
+            }
+            
+//            let dataAsString = String(data: data, encoding: .utf8)
+//            print(dataAsString)
             
         }.resume()
     }
