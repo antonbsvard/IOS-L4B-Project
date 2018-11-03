@@ -18,10 +18,19 @@ struct question {
     let incorrect_answers : [String]
     
 }
-
+/* Contains functions for cummunication with the opentdb database
+ - getQuestions() -> Void gets 10 new questions and puts them in the class variable questions
+ 
+ TODO:
+ - getNQuestions(nrOfQuestions) //get anny number of questions
+ - getDifficulty(nrOfQuestions, difficulty) //get anny number of questions and specific difficulty
+ 
+ */
 class opentdb {
 
     var questions = [question]()
+    
+    // - getQuestions() -> Void gets 10 new questions and puts them in the class variable questions
     func getQuestions() -> Void {
         print("Opentdb: GetQuestions()")
         let jsonURLAsString = "https://opentdb.com/api.php?amount=10&type=multiple"
