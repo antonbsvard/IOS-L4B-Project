@@ -28,31 +28,41 @@ struct question {
  */
 class opentdb {
 
-    var questions = [question]()
+    public var questions = [question]()
+    
+    private let opentdbURL = "https://opentdb.com/api.php?"
     
     // - getQuestions() -> Void gets 10 new questions and puts them in the class variable questions
+    //Parameters: NONE
+    //Return: VOID
     func getQuestions() -> Void {
         print("Opentdb: GetQuestions()")
-        let jsonURLAsString = "https://opentdb.com/api.php?amount=10&type=multiple"
+        
+        let nrOfQuestions = 10
+        let typeOfQuestion = "multiple"
+        let jsonURLAsString = opentdbURL + "amount=" + String(nrOfQuestions) + "&type=" + typeOfQuestion
+        
+        //Checking the url is ok:
         guard let url = URL(string: jsonURLAsString) else {
             print("Opentdb: No URL")
             return
-            
         }
         
+        //Retrivieng data ascync:
         URLSession.shared.dataTask(with: url) { (data, response, error) in
+            //If no data recieved:
             guard let data = data else {
                 print("Opentdb: No data")
                 return
-                
             }
+            //Decoding JSON:
             do {
                 guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String : Any] else {
                     print("Opentdb: Något gick snett med avkodningen av json")
                     return
                 }
-                
                 let results = json["results"]
+                //Looping through all questions recieved:
                 for object in (results as! NSArray) {
                     if let x : NSDictionary = object as? NSDictionary{
                         let category = (x["category"] as! String)
@@ -63,7 +73,9 @@ class opentdb {
                         for i in (x["incorrect_answers"] as? NSArray)!{
                             incorrect_answers.append(i as! String)
                         }
+                        //Adding all info in the object to the question struct
                         let structQuestion = question(difficulty: difficulty, category: category, question: quest, correct_answer: correct_answer, incorrect_answers: incorrect_answers)
+                        //Append question strukt to list of questions:
                         self.questions.append(structQuestion)
                     }
                     
@@ -73,6 +85,7 @@ class opentdb {
                 print("Opentdb: Något gick snett i datahanteringen")
                 return
             }
+            //DONE!
             print("Opentdb: Klar med datahanteringen")
             }.resume()
         
