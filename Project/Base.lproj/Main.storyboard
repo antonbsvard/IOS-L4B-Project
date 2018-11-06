@@ -59,11 +59,43 @@
                     <connections>
                         <outlet property="startQuizBtn" destination="XgZ-De-Vct" id="yex-aI-gtp"/>
                         <outlet property="startpageImage" destination="Hwk-z7-yxF" id="Ady-D3-lOT"/>
+                        <segue destination="Us7-bq-a64" kind="show" identifier="questionSegue" id="LMq-JU-cPs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="133.25892857142856"/>
+        </scene>
+        <!--Questions View Controller-->
+        <scene sceneID="Fd2-xe-6XA">
+            <objects>
+                <viewController id="Us7-bq-a64" customClass="QuestionsViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4gJ-Zs-Bs6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y14-j4-MaW">
+                                <rect key="frame" x="32" y="76" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="y14-j4-MaW" secondAttribute="height" multiplier="1:1" id="Sdn-w5-A2T"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5872126459" blue="0.84194334019999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y14-j4-MaW" firstAttribute="leading" secondItem="9fa-Yv-egb" secondAttribute="leading" constant="32" id="DvL-7A-R5Y"/>
+                            <constraint firstItem="y14-j4-MaW" firstAttribute="top" secondItem="9fa-Yv-egb" secondAttribute="top" constant="32" id="KaS-uV-gQS"/>
+                            <constraint firstItem="9fa-Yv-egb" firstAttribute="trailing" secondItem="y14-j4-MaW" secondAttribute="trailing" constant="32" id="cq1-Ob-czg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9fa-Yv-egb"/>
+                    </view>
+                    <connections>
+                        <outlet property="speechBubbleImage" destination="y14-j4-MaW" id="A0t-dr-pPa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WfJ-UU-PBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1043.4782608695652" y="136.60714285714286"/>
         </scene>
     </scenes>
 </document>

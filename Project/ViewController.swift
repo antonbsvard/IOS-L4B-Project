@@ -90,8 +90,10 @@ class ViewController: UIViewController {
 
     @IBAction func startQuizBtn(_ sender: UIButton) {
         owlSound?.play() // play loaded sound on click
+        performSegue(withIdentifier: "questionSegue", sender: self)
   
 }
+    
     // Load sound on buttonclick function in viewDidLoad
     func loadSound(){
         do{
