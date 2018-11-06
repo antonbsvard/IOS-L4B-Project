@@ -38,7 +38,10 @@ class ViewController: UIViewController {
     func getData(db: opentdb) -> Void {
         if db.isQuestionsReady(){
             print("Data is ready")
-            print(db.getQestions()[0])
+            for item in db.getQestions(){
+                print(item)
+            }
+//            print(db.getQestions()[0])
         }
         else {
             print("Kolla om datan är redo om 0.5 secunder")
