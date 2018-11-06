@@ -48,7 +48,6 @@ class ViewController: UIViewController {
             UIImage(named: "owl22"),
             UIImage(named: "owl23")
             ] as! [UIImage]
-        startpageImage.clipsToBounds = true
         startpageImage.animationImages = images
         startpageImage.animationDuration = 2.0
         startpageImage.startAnimating()
