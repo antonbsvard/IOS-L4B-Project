@@ -28,14 +28,32 @@ struct question {
  */
 class opentdb {
 
-    public var questions = [question]()
+    private var IsDataReady : Bool = false
+    
+    private var questions = [question]()
     
     private let opentdbURL = "https://opentdb.com/api.php?"
     
-    // - getQuestions() -> Void gets 10 new questions and puts them in the class variable questions
+    // Returns true if data is ready else false
+    public func isQuestionsReady() -> Bool {
+        return self.IsDataReady
+    }
+    
+    // getQuestions() returns list of questions if data is ready else returns empty list
+    //Parameters: NONE
+    //Return: [question]
+    func getQestions() -> [question] {
+        if IsDataReady{
+            return questions
+        }
+        else {
+            return [question]()
+        }
+    }
+    // getQuestionsFromDB() -> Void gets 10 new questions and puts them in the class variable questions
     //Parameters: NONE
     //Return: VOID
-    func getQuestions() -> Void {
+    public func getQuestionsFromDB() -> Void {
         print("Opentdb: GetQuestions()")
         
         let nrOfQuestions = 10
@@ -50,6 +68,7 @@ class opentdb {
         
         //Retrivieng data ascync:
         URLSession.shared.dataTask(with: url) { (data, response, error) in
+            self.IsDataReady = false
             //If no data recieved:
             guard let data = data else {
                 print("Opentdb: No data")
@@ -87,7 +106,9 @@ class opentdb {
             }
             //DONE!
             print("Opentdb: Klar med datahanteringen")
+            self.IsDataReady = true
             }.resume()
         
     }
+
 }
