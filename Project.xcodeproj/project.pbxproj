@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652B27072191D06A00BF356B /* owlSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 652B27062191D06A00BF356B /* owlSound.wav */; };
 		CD23F1D221874144009B26C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23F1D121874144009B26C2 /* AppDelegate.swift */; };
 		CD23F1D421874144009B26C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23F1D321874144009B26C2 /* ViewController.swift */; };
 		CD23F1D721874144009B26C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD23F1D521874144009B26C2 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		652B27062191D06A00BF356B /* owlSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = owlSound.wav; path = ../../../owl/owlSound.wav; sourceTree = "<group>"; };
 		CD23F1CE21874144009B26C2 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD23F1D121874144009B26C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD23F1D321874144009B26C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				CD23F1D321874144009B26C2 /* ViewController.swift */,
 				CD23F1D521874144009B26C2 /* Main.storyboard */,
 				CD23F1D821874145009B26C2 /* Assets.xcassets */,
+				652B27062191D06A00BF356B /* owlSound.wav */,
 				CD23F1DA21874145009B26C2 /* LaunchScreen.storyboard */,
 				CD23F1DD21874145009B26C2 /* Info.plist */,
 			);
@@ -125,6 +128,7 @@
 				CD23F1DC21874145009B26C2 /* LaunchScreen.storyboard in Resources */,
 				CD23F1D921874145009B26C2 /* Assets.xcassets in Resources */,
 				CD23F1D721874144009B26C2 /* Main.storyboard in Resources */,
+				652B27072191D06A00BF356B /* owlSound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
