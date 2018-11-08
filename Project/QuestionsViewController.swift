@@ -10,6 +10,7 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
 
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var speechBubbleImage: UIImageView!
     
     @IBOutlet weak var owlAsker: UIImageView!
@@ -48,6 +49,14 @@ class QuestionsViewController: UIViewController {
         owlAsker.animationImages = owlImages
         owlAsker.animationDuration = 2.0
         owlAsker.startAnimating()
+        
+        
+        let listOfQuestions = db.getQestions()
+        if listOfQuestions.count > 0 {
+            let q1 = listOfQuestions[0]
+            questionLabel.text = q1.question
+        }
+        
         
         // Do any additional setup after loading the view.
     }
