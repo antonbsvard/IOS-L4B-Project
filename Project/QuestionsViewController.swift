@@ -23,7 +23,7 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     //***********Variables:***************
-    //Keeps teack on witch questionRound
+    //Keeps track on witch questionRound
 
     var questionRound = 0
     var scoreCount = 0
